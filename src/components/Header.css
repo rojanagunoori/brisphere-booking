@@ -1,0 +1,350 @@
+
+:root {
+
+    --header-bg-light: #ffffff;
+    --header-text-light: #333333;
+    --booking-box-bg-light: #f9f9f9;
+    --button-bg-light: #007bff;
+    --button-bg-hover-light: #0056b3;
+    --input-bg-light: #f0f0f0;
+    --input-border-light: #ddd;
+    --label-color-light: #333;
+
+    --header-bg-dark: #333333;
+    --header-text-dark: #f1f1f1;
+    --booking-box-bg-dark: #444444;
+    --button-bg-dark: #0056b3;
+    --button-bg-hover-dark: #004494;
+    --input-bg-dark: #555;
+    --input-border-dark: #666;
+    --label-color-dark: #f1f1f1;
+
+    --form-bg-light: #ffffff;
+    --form-border-light: #ddd;
+    --form-text-light: #333;
+    --input-bg-light: #f0f0f0;
+    --input-border-light: #ddd;
+    --input-text-light: #333;
+  
+
+    --form-bg-dark: #333333;
+    --form-border-dark: #555;
+    --form-text-dark: #f1f1f1;
+    --input-bg-dark: #555;
+    --input-border-dark: #666;
+    --input-text-dark: #f1f1f1;
+  }
+  
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header-bg-light);
+    color: var(--header-text-light);
+    transition: all 0.3s ease;
+    
+  }
+  
+  .header.dark-mode {
+    background-color: var(--header-bg-dark);
+    color: var(--header-text-dark);
+  }
+  
+
+  .booking-box {
+    background-color: var(--booking-box-bg-light);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-out;
+    position: relative;  /* Positioning context */
+z-index: -0.5;
+  }
+  
+  .booking-box.dark-mode {
+    background-color: var(--booking-box-bg-dark);
+  }
+  
+  .booking-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--header-text-light);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+   
+  }
+  
+  .form-group {
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--label-color-light);
+  }
+  
+  .input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid var(--input-border-light);
+    border-radius: 5px;
+    background-color: var(--input-bg-light);
+    font-size: 1rem;
+    color: var(--header-text-light);
+  }
+  
+  .input:focus, select:focus {
+    outline: none;
+    border-color: var(--button-bg-light);
+  }
+  
+  .book-button {
+    padding: 12px 20px;
+    background-color: var(--button-bg-light);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .book-button:hover {
+    background-color: var(--button-bg-hover-light);
+    transform: scale(1.05);
+  }
+  
+
+  .header.dark-mode .book-button {
+    background-color: var(--button-bg-dark);
+  }
+  
+  .header.dark-mode .book-button:hover {
+    background-color: var(--button-bg-hover-dark);
+  }
+  
+  .header.dark-mode .input, .header.dark-mode select {
+    background-color: var(--input-bg-dark);
+    color: var(--header-text-dark);
+    border-color: var(--input-border-dark);
+  }
+  
+  .header.dark-mode .form-group label {
+    color: var(--label-color-dark);
+  }
+  
+
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icons a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: var(--button-bg-light);
+  }
+  
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .left-side {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-side h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .left-side p {
+    font-size: 1.1rem;
+    margin-top: 5px;
+  }
+  
+  .right-side {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--header-text-light);
+    transition: color 0.3s ease;
+  }
+  
+  .dark-mode-toggle:hover {
+    color: var(--button-bg-light);
+  }
+  
+
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .booking-box {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .form {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .form-group {
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  
+    .dark-mode-toggle {
+      top: 10px;
+      right: 10px;
+    }
+  }
+ 
+
+  
+
+  .form {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+    background-color: var(--form-bg-light); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .form.dark-mode {
+    background-color: var(--form-bg-dark); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-group {
+    text-align: left;
+    flex: 1; 
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--form-text-light); 
+    transition: color 0.3s ease;
+  }
+  
+  .form.dark-mode .form-group label {
+    color: var(--form-text-dark); 
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: var(--input-bg-light); 
+    border: 1px solid var(--input-border-light); 
+    color: var(--input-text-light);
+    font-size: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-color: var(--button-bg-light); 
+  }
+  
+  .form.dark-mode .input-field {
+    background-color: var(--input-bg-dark); 
+    border-color: var(--input-border-dark); 
+    color: var(--input-text-dark); 
+  }
+  
+  .book-button {
+    padding: 12px 20px;
+    background-color: var(--button-bg-light);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .book-button:hover {
+    background-color: var(--button-bg-hover-light);
+    transform: scale(1.05);
+  }
+  
+  .form.dark-mode .book-button {
+    background-color: var(--button-bg-dark);
+  }
+  
+  .form.dark-mode .book-button:hover {
+    background-color: var(--button-bg-hover-dark);
+  }
+  
+
+  @media (max-width: 768px) {
+    .form {
+      flex-direction: column; 
+      gap: 15px;
+    }
+  
+    .form-group {
+      text-align: center;
+    }
+  }
+  

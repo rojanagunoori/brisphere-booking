@@ -1,0 +1,130 @@
+/* Default Styles (Light Mode) */
+:root {
+    --bg-color-light: #fff;
+    --text-color-light: #333;
+    --link-color-light: #0066cc;
+    --link-hover-light: #005bb5;
+    --box-shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --button-bg-light: #fff;
+    --button-text-light: #333;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .users-container {
+    padding: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .users-container.dark {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .users-container.light {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+  }
+  
+  .theme-toggle {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: var(--button-bg-light);
+    color: var(--button-text-light);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle:hover {
+    background-color: #f0f0f0;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .user-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .user-item {
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: var(--box-shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .user-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .user-item a {
+    text-decoration: none;
+    color: var(--link-color-light);
+    transition: color 0.3s ease;
+  }
+  
+  .user-item a:hover {
+    color: var(--link-hover-light);
+  }
+  
+  .user-details h3 {
+    margin: 0 0 10px;
+  }
+  
+  .user-details p {
+    margin: 5px 0;
+  }
+  
+  /* Dark Mode Styles */
+  .users-container.dark .theme-toggle {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .users-container.dark .user-item {
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  .users-container.dark .user-item a {
+    color: #a6c7f2;
+  }
+  
+  .users-container.dark .user-item a:hover {
+    color: #76aaff;
+  }
+  
+  .users-container.dark .theme-toggle:hover {
+    background-color: #333;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+  
+  .loading {
+    color: #0066cc;
+  }
+  
+  .error {
+    color: #ff4d4d;
+  }
+  
