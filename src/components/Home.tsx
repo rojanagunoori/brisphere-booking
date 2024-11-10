@@ -15,7 +15,15 @@ interface HomeProps {
 const Home: React.FC<HomeProps> = ({ posts }) => {
   return (
     <div className="home">
-      <h1>Welcome to Brisphere Workation</h1>
+      <motion.div
+      style={{padding:"1rem"}}
+        className="posts-list"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1>Welcome to Brisphere Workation</h1>
+        </motion.div> 
       <motion.div
         className="posts-list"
         initial={{ opacity: 0 }}

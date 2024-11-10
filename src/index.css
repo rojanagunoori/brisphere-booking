@@ -1,0 +1,59 @@
+/* Hover effects for links */
+.nav-links li a:hover,
+.user-link:hover,
+.post-link:hover {
+  color: #ff6347;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  
+}
+
+ul{
+list-style: none !important;
+}
+
+
+li {
+  
+ text-decoration: none;
+  padding: 1rem !important;     /* Optional: add space between list items */
+}
+
+
+
+.post-link{
+  list-style: none;
+}
+
+/* Hamburger menu animation */
+.hamburger {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: rotate(90deg);
+}
+
+/* Smooth page transition */
+body {
+  transition: background-color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Animate user list and post list */
+.users-container, .posts-container {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
